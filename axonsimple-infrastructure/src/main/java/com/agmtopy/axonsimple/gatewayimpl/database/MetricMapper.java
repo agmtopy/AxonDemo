@@ -20,4 +20,9 @@ public interface MetricMapper {
     int delete(@Param("id") String id, @Param("modifier") String modifier);
 
     MetricDO getById(@Param("id") String id);
+
+    /**
+     * 根据userId查询
+     */
+    MetricDO getByUserId(@Param("userId") String userId);
 }

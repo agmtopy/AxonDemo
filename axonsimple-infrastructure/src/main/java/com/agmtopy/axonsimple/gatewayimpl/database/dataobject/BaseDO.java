@@ -2,9 +2,6 @@ package com.agmtopy.axonsimple.gatewayimpl.database.dataobject;
 
 /**
  * BaseDO
- *
- * @author Frank Zhang
- * @date 2020-07-02 10:03 AM
  */
 public class BaseDO {
     private String creator;

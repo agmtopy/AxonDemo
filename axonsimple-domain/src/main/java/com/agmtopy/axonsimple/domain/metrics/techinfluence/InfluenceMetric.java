@@ -13,10 +13,8 @@ import lombok.Data;
  */
 @Data
 public class InfluenceMetric extends MainMetric {
+
     private ATAMetric ataMetric;
-    private PatentMetric patentMetric;
-    private SharingMetric sharingMetric;
-    private PaperMetric paperMetric;
 
     public InfluenceMetric(UserProfile metricOwner){
         this.metricOwner = metricOwner;

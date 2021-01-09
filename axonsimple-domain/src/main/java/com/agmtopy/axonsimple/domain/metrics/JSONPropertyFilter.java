@@ -4,9 +4,6 @@ import com.alibaba.fastjson.serializer.PropertyFilter;
 
 /**
  * JSONPropertyFilter
- *
- * @author Frank Zhang
- * @date 2019-03-02 10:53 PM
  */
 public class JSONPropertyFilter implements PropertyFilter {
 

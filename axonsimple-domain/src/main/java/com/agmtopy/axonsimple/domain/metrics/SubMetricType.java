@@ -1,10 +1,7 @@
 package com.agmtopy.axonsimple.domain.metrics;
 
 /**
- * SubMetricType
- *
- * @author Frank Zhang
- * @date 2018-08-27 4:54 PM
+ * 枚举
  */
 public enum SubMetricType {
 
@@ -53,6 +50,4 @@ public enum SubMetricType {
     public String getMetricSubTypeName() {
         return metricSubTypeName;
     }
-
-
 }

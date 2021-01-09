@@ -8,7 +8,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>axonsimple-domain</artifactId>
-	<name>AxonsimpleApplication-domain</name>
+	<name>com.agmtopy.axonsimple.AxonsimpleApplication-domain</name>
 	<dependencies>
 		<!-- COLA Framework -->
 		<dependency>

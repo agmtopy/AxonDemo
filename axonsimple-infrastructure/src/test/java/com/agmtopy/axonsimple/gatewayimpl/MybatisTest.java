@@ -4,7 +4,11 @@ import com.agmtopy.axonsimple.gatewayimpl.database.MetricMapper;
 import com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * MybatisTest
@@ -27,7 +31,7 @@ public class MybatisTest {
         Mybatis3Utils.closeCurrentSession();
     }
 
-    //@Test
+    @Test
     public void insert() {
         MetricDO metricDO = new MetricDO();
         metricDO.setMainMetric("mainTest");
@@ -36,9 +40,14 @@ public class MybatisTest {
         metricDO.setCreator("Frank");
         metricDO.setModifier("Frank");
         metricDO.setMetricItem("{\"patentName\": \"Leads重构\", \"level\": \"PROJECT\"}");
-
         metricMapper.create(metricDO);
         sqlSession.commit();
+
+        MetricDO byUserId = metricMapper.getByUserId("12345");
+        assertThat(byUserId).isNotNull()
+                .hasFieldOrPropertyWithValue("userId", "12345")
+                .hasFieldOrPropertyWithValue("creator", "Frank")
+                .hasFieldOrPropertyWithValue("modifier", "Frank");
     }
 
 }

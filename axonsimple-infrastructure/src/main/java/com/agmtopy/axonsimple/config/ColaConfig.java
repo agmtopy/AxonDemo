@@ -12,7 +12,7 @@ import java.util.List;
  * Configuration for COLA framework
  */
 @Configuration
-@ComponentScan(value = {"com.alibaba.cola","AxonsimpleApplication"})
+@ComponentScan(value = {"com.alibaba.cola"})
 public class ColaConfig {
 
     @Bean(initMethod = "init")

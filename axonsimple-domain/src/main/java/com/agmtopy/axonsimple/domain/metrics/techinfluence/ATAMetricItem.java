@@ -7,23 +7,47 @@ import com.alibaba.fastjson.JSON;
 import lombok.Data;
 
 /**
- * ATAMetricItem
  * 线上分享，ATA文章指标项
- * @author Frank Zhang
- * @date 2018-07-04 3:20 PM
  */
 @Data
 public class ATAMetricItem extends MetricItem {
 
     private static Logger logger = LoggerFactory.getLogger(ATAMetricItem.class);
 
-    private String authorId;//作者
-    private String title;//文章标题
-    private String url;//文章链接
-    private long thumbsUpCount;//点赞数
-    private long hitCount;//点击数
-    private long commentCount;//评论数
-    private long favoriteCount;//收藏数
+    /**
+     * 作者
+     */
+    private String authorId;
+
+    /**
+     * 文章标题
+     */
+    private String title;
+
+    /**
+     * 文章链接
+     */
+    private String url;
+
+    /**
+     * 点赞数
+     */
+    private long thumbsUpCount;
+
+    /**
+     * 点击数
+     */
+    private long hitCount;
+
+    /**
+     * 评论数
+     */
+    private long commentCount;
+
+    /**
+     * 收藏数
+     */
+    private long favoriteCount;
 
     private static int HIT_STEP_SIZE = 100;
     private static int THUMB_UPS_STEP_SIZE = 20;

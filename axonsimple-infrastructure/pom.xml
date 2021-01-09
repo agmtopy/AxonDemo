@@ -8,7 +8,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>axonsimple-infrastructure</artifactId>
-	<name>AxonsimpleApplication-infrastructure</name>
+	<name>com.agmtopy.axonsimple.AxonsimpleApplication-infrastructure</name>
 	<dependencies>
 		<!--DIP here, Infrastructure depends on Domain-->
 		<dependency>

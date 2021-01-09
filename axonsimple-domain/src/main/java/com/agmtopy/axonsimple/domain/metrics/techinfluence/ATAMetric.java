@@ -3,10 +3,7 @@ package com.agmtopy.axonsimple.domain.metrics.techinfluence;
 import com.agmtopy.axonsimple.domain.metrics.*;
 
 /**
- * ATAMetric
  * ATA文章指标
- * @author Frank Zhang
- * @date 2018-07-04 1:24 PM
  */
 public class ATAMetric extends SubMetric {
 

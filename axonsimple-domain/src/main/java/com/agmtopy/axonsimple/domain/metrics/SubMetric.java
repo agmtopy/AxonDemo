@@ -1,18 +1,13 @@
 package com.agmtopy.axonsimple.domain.metrics;
 
-import com.agmtopy.axonsimple.domain.user.UserProfile;
 import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Sub Metric,  一个主度量（MainMetric）可以有一个或者多个子度量（SubMetric）组成的。
- *
- * @author Frank Zhang
- * @date 2018-08-27 6:44 PM
  */
 @Data
 public abstract class SubMetric extends Metric {
@@ -28,20 +23,20 @@ public abstract class SubMetric extends Metric {
 
     }
 
+    /**
+     * set 父类
+     */
     public void setParent(MainMetric parent){
         this.parent = parent;
-        this.metricOwner = parent.metricOwner;
         parent.addSubMetric(this);
     }
 
     /**
-     * 添加度量项
-     * @param metricItem
+     * 增加元素
      */
     public void addMetricItem(MetricItem metricItem){
         metricItemList.add(metricItem);
     }
-
 
     @Override
     public String getName() {
@@ -60,10 +55,5 @@ public abstract class SubMetric extends Metric {
             subMetricScore = subMetricScore + metricItem.calculateScore();
         }
         return subMetricScore;
-    }
-
-    @Override
-    public UserProfile getMetricOwner(){
-        return parent.getMetricOwner();
     }
 }

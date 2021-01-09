@@ -13,12 +13,18 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 查询命令
+ */
 @Component
 public class ATAMetricQryExe{
 
     @Resource
     private MetricMapper metricMapper;
 
+    /**
+     * 执行
+     */
     public MultiResponse<ATAMetricCO> execute(ATAMetricQry cmd) {
         List<MetricDO> metricDOList = metricMapper.listBySubMetric(cmd.getOwnerId(), SubMetricType.ATA.getMetricSubTypeCode());
         List<ATAMetricCO> ataMetricCOList = new ArrayList<>();

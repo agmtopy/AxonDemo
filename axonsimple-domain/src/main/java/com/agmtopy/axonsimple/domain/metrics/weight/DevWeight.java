@@ -8,22 +8,7 @@ public class DevWeight extends Weight{
     public static DevWeight singleton= new DevWeight();
 
     @Override
-    public double getAppQualityWeight() {
-        return  20 / WEIGHT_PERCENTAGE;
-    }
-
-    @Override
     public double getTechInfluenceWeight() {
         return 30 / WEIGHT_PERCENTAGE;
-    }
-
-    @Override
-    public double getTechContributionWeight() {
-        return 30 / WEIGHT_PERCENTAGE;
-    }
-
-    @Override
-    public double getDevQualityWeight() {
-        return 20 / WEIGHT_PERCENTAGE;
     }
 }

@@ -1,85 +1,38 @@
 package com.agmtopy.axonsimple.service;
 
+import com.agmtopy.axonsimple.command.query.ATAMetricQryExe;
+import com.agmtopy.axonsimple.dto.clientobject.ATAMetricCO;
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.Response;
-import com.agmtopy.axonsimple.api.MetricsServiceI;
+import com.agmtopy.axonsimple.api.MetricsService;
 import com.agmtopy.axonsimple.command.*;
-import com.agmtopy.axonsimple.command.query.ATAMetricQryExe;
 import com.agmtopy.axonsimple.dto.*;
-import com.agmtopy.axonsimple.dto.clientobject.ATAMetricCO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
 /**
  * MetricsServiceImpl
- *
- * @author Frank Zhang
- * @date 2019-03-01 11:41 AM
  */
 @Service
-public class MetricsServiceImpl implements MetricsServiceI{
+public class MetricsServiceImpl implements MetricsService {
 
     @Resource
     private ATAMetricAddCmdExe ataMetricAddCmdExe;
     @Resource
-    private SharingMetricAddCmdExe sharingMetricAddCmdExe;
-    @Resource
-    private PatentMetricAddCmdExe patentMetricAddCmdExe;
-    @Resource
-    private PaperMetricAddCmdExe paperMetricAddCmdExe;
-    @Resource
-    private RefactoringMetricAddCmdExe refactoringMetricAddCmdExe;
-    @Resource
-    private MiscMetricAddCmdExe miscMetricAddCmdExe;
-    @Resource
-    private CodeReviewMetricAddCmdExe codeReviewMetricAddCmdExe;
-    @Resource
-    private MetricDeleteCmdExe metricDeleteCmdExe;
-    @Resource
     private ATAMetricQryExe ataMetricQryExe;
 
-
+    /**
+     * 新增方法
+     */
     @Override
     public Response addATAMetric(ATAMetricAddCmd cmd) {
         return ataMetricAddCmdExe.execute(cmd);
     }
 
-    @Override
-    public Response addSharingMetric(SharingMetricAddCmd cmd) {
-        return sharingMetricAddCmdExe.execute(cmd);
-    }
-
-    @Override
-    public Response addPatentMetric(PatentMetricAddCmd cmd) {
-        return  patentMetricAddCmdExe.execute(cmd);
-    }
-
-    @Override
-    public Response addPaperMetric(PaperMetricAddCmd cmd) {
-        return  paperMetricAddCmdExe.execute(cmd);
-    }
-
-    @Override
-    public Response addRefactoringMetric(RefactoringMetricAddCmd cmd) {
-        return  refactoringMetricAddCmdExe.execute(cmd);
-    }
-
-    @Override
-    public Response addMiscMetric(MiscMetricAddCmd cmd) {
-        return  miscMetricAddCmdExe.execute(cmd);
-    }
-
-    @Override
-    public Response addCodeReviewMetric(CodeReviewMetricAddCmd cmd) {
-        return codeReviewMetricAddCmdExe.execute(cmd);
-    }
-
-    @Override
-    public Response deleteMetric(MetricDeleteCmd cmd) {
-        return metricDeleteCmdExe.execute(cmd);
-    }
-
+    /**
+     * 查询方法
+     */
     @Override
     public MultiResponse<ATAMetricCO> listATAMetrics(ATAMetricQry ataMetricQry) {
         return ataMetricQryExe.execute(ataMetricQry);

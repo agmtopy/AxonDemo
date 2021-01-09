@@ -1,16 +1,13 @@
 package com.agmtopy.axonsimple.domain.metrics;
 
 
-import com.alibaba.cola.domain.EntityObject;
 import com.agmtopy.axonsimple.domain.user.UserProfile;
+import com.alibaba.cola.domain.EntityObject;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Metric
- * 指标
- * @author Frank Zhang
- * @date 2018-07-04 1:23 PM
+ * Metric 指标
  */
 public abstract class Metric extends EntityObject implements Measurable{
 
@@ -24,20 +21,13 @@ public abstract class Metric extends EntityObject implements Measurable{
 
     }
 
-    public Metric(UserProfile metricOwner){
-        this.metricOwner = metricOwner;
-    }
-
-
     /**
      * 度量名称，用于UI显示
-     * @return
      */
     abstract public String getName();
 
     /**
      * 度量Code，用于数据库存储
-     * @return
      */
     abstract public String getCode();
 

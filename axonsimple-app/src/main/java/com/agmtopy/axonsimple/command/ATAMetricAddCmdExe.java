@@ -12,10 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * ATAMetricAddCmdExe
- *
- * @author Frank Zhang
- * @date 2019-03-01 11:42 AM
+ * 新增
  */
 @Component
 public class ATAMetricAddCmdExe{

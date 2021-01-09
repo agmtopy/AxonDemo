@@ -9,9 +9,6 @@ import org.junit.Test;
 
 /**
  * ATAMetricTest
- *
- * @author Frank Zhang
- * @date 2019-02-26 2:07 PM
  */
 public class ATAMetricTest {
 
