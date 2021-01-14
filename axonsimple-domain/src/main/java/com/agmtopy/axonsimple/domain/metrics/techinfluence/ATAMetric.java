@@ -7,18 +7,9 @@ import com.agmtopy.axonsimple.domain.metrics.*;
  */
 public class ATAMetric extends SubMetric {
 
-    public ATAMetric(){
-        this.subMetricType = SubMetricType.ATA;
-    }
-
     public ATAMetric(MainMetric parent) {
         this.parent = parent;
         parent.addSubMetric(this);
         this.subMetricType = SubMetricType.ATA;
-    }
-
-    @Override
-    public double getWeight() {
-        return  parent.getMetricOwner().getWeight().getUnanimousWeight();
     }
 }

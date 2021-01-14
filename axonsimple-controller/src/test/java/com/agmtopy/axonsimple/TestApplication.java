@@ -1,4 +1,4 @@
-package java.com.agmtopy.axonsimple;
+package com.agmtopy.axonsimple;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
 @ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = {TestApplication.class})})
-@SpringBootApplication(scanBasePackages = {"com.alibaba.craftsman"})
+@SpringBootApplication(scanBasePackages = {"com.agmtopy.axonsimple"})
 public class TestApplication {
 
     public static void main(String[] args) {

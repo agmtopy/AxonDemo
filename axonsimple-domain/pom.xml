@@ -15,6 +15,7 @@
 			<groupId>com.aliyun</groupId>
 			<artifactId>cola-core</artifactId>
 		</dependency>
+		<!-- domain依赖client是为了引用client中的轻量级domain model-->
 		<dependency>
 			<groupId>com.agmtopy</groupId>
 			<artifactId>axonsimple-client</artifactId>

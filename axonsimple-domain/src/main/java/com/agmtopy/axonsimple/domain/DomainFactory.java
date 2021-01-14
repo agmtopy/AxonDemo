@@ -1,14 +1,16 @@
 package com.agmtopy.axonsimple.domain;
 
-import com.agmtopy.axonsimple.domain.user.UserProfile;
+import com.agmtopy.axonsimple.domain.metrics.techinfluence.InfluenceMetric;
 
 /**
- * 领域工厂
+ * 领域对象工厂
  */
 public class DomainFactory {
-
-    public static UserProfile getUserProfile(){
-        return new UserProfile();
+    /**
+     * 示例
+     */
+    public static InfluenceMetric getInfluenceMetric(){
+        return new InfluenceMetric("示例");
     }
 
 }

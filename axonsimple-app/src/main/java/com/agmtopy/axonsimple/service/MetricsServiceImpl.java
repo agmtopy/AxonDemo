@@ -13,14 +13,15 @@ import javax.annotation.Resource;
 
 /**
  * MetricsServiceImpl
+ * Service的实现作为Face
  */
 @Service
 public class MetricsServiceImpl implements MetricsService {
 
     @Resource
-    private ATAMetricAddCmdExe ataMetricAddCmdExe;
-    @Resource
     private ATAMetricQryExe ataMetricQryExe;
+    @Resource
+    private ATAMetricAddCmdExe ataMetricAddCmdExe;
 
     /**
      * 新增方法

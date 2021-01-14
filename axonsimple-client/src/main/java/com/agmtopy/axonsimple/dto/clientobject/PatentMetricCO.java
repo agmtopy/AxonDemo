@@ -1,15 +1,11 @@
 package com.agmtopy.axonsimple.dto.clientobject;
 
-import com.alibaba.cola.dto.ClientObject;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 
 /**
  * PatentMetricCO
- *
- * @author Frank Zhang
- * @date 2019-03-03 11:16 AM
  */
 @Data
 public class PatentMetricCO  extends AbstractMetricCO {

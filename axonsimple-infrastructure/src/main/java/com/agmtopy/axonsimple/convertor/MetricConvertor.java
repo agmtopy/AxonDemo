@@ -1,6 +1,5 @@
 package com.agmtopy.axonsimple.convertor;
 
-
 import com.agmtopy.axonsimple.domain.metrics.MetricItem;
 import com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO;
 

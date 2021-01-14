@@ -4,9 +4,10 @@ import com.agmtopy.axonsimple.gatewayimpl.database.MetricMapper;
 import com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -43,11 +44,10 @@ public class MybatisTest {
         metricMapper.create(metricDO);
         sqlSession.commit();
 
-        MetricDO byUserId = metricMapper.getByUserId("12345");
-        assertThat(byUserId).isNotNull()
-                .hasFieldOrPropertyWithValue("userId", "12345")
-                .hasFieldOrPropertyWithValue("creator", "Frank")
-                .hasFieldOrPropertyWithValue("modifier", "Frank");
+        List<MetricDO> metricList= metricMapper.listBySubMetric("12345","subTest");
+        assertThat(metricList).isNotEmpty()
+                .anyMatch(item -> "12345".equals(item.getId()))
+                .anyMatch(item -> "Frank".equals(item.getCreator()))
+                .anyMatch(item -> "Frank".equals(item.getModifier()));
     }
-
 }

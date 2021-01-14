@@ -4,6 +4,7 @@ import com.alibaba.fastjson.serializer.PropertyFilter;
 
 /**
  * JSONPropertyFilter
+ * 这应该算是工具类,工具类要归纳在domain下嘛?
  */
 public class JSONPropertyFilter implements PropertyFilter {
 

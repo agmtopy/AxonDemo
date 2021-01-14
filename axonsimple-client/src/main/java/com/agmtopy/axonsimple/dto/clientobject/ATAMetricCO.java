@@ -1,15 +1,11 @@
 package com.agmtopy.axonsimple.dto.clientobject;
 
-import com.alibaba.cola.dto.ClientObject;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 
 /**
  * ATAMetricCO
- *
- * @author Frank Zhang
- * @date 2019-03-01 5:39 PM
  */
 @Data
 public class ATAMetricCO extends AbstractMetricCO {

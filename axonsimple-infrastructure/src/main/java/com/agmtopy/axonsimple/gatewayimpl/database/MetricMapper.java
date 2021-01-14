@@ -9,20 +9,13 @@ import java.util.List;
 @Mapper
 public interface MetricMapper {
 
+    /**
+     * insert
+     */
     int create(MetricDO dataObject);
-
-    List<MetricDO> listByUserId(@Param("userId") String userId);
-
-    List<MetricDO> listByMainMetric(@Param("userId") String userId, @Param("mainMetric") String mainMetric);
-
-    List<MetricDO> listBySubMetric(@Param("userId") String userId, @Param("subMetric") String subMetric);
-
-    int delete(@Param("id") String id, @Param("modifier") String modifier);
-
-    MetricDO getById(@Param("id") String id);
 
     /**
      * 根据userId查询
      */
-    MetricDO getByUserId(@Param("userId") String userId);
+    List<MetricDO> listBySubMetric(@Param("userId") String userId, @Param("subMetric") String subMetric);
 }

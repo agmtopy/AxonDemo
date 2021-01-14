@@ -39,43 +39,9 @@
         )
     </insert>
 
-    <delete id="delete" parameterType="map">
-        UPDATE metric SET is_deleted='y', modifier = #{modifier} WHERE id = #{id} and IS_DELETED = 'n'
-    </delete>
-
-    <select id="listByUserId" resultType="com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO" parameterType="map">
-        <include refid="COMMON_SELECT"/>
-        WHERE user_id = #{userId} and IS_DELETED = 'n'
-    </select>
-
-    <select id="listByMainMetric" resultType="com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO" parameterType="map">
-        <include refid="COMMON_SELECT"/>
-        WHERE user_id = #{userId} and main_metric= #{mainMetric} and IS_DELETED = 'n'
-    </select>
-
     <select id="listBySubMetric" resultType="com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO" parameterType="map">
         <include refid="COMMON_SELECT"/>
         WHERE user_id = #{userId} and sub_metric= #{subMetric} and IS_DELETED = 'n'
     </select>
 
-    <select id="getById" resultType="com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO" parameterType="map">
-        <include refid="COMMON_SELECT"/>
-        WHERE id = #{id} and IS_DELETED = 'n'
-    </select>
-
-    <select id="getByUserId" resultType="com.agmtopy.axonsimple.gatewayimpl.database.dataobject.MetricDO" parameterType="map">
-        SELECT
-        id,
-        user_id userId,
-        main_metric mainMetric,
-        sub_metric subMetric,
-        metric_item metricItem,
-        creator,
-        modifier,
-        gmt_create gmtCreate,
-        gmt_modified gmtModified,
-        is_deleted isDeleted
-       FROM metric
-        WHERE user_id = #{userId} and IS_DELETED = 'n'
-    </select>
 </mapper>

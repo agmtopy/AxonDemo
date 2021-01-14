@@ -26,7 +26,6 @@ public class MetricGatewayImpl implements MetricGateway {
     @Resource
     private DomainEventPublisher domainEventPublisher;
 
-
     public void save(MetricItem metricItem){
         MetricDO metricDO = MetricConvertor.toDataObject(metricItem);
         metricMapper.create(metricDO);

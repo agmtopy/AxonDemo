@@ -7,9 +7,6 @@ import javax.validation.constraints.NotEmpty;
 
 /**
  * AbstractMetricCO
- *
- * @author Frank Zhang
- * @date 2019-03-04 11:32 AM
  */
 @Data
 public abstract class AbstractMetricCO extends ClientObject{

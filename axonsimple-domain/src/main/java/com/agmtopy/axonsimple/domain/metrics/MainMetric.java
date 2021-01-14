@@ -10,6 +10,8 @@ import java.util.List;
 @Data
 public abstract class MainMetric extends Metric{
 
+    protected String ownerId;
+
     protected MainMetricType metricMainType;
 
     protected List<SubMetric> subMetrics = new ArrayList<>();
@@ -36,7 +38,7 @@ public abstract class MainMetric extends Metric{
     public double calculateScore() {
         double mainMetricScore = 0;
         for (Metric subMetric : subMetrics) {
-            mainMetricScore = mainMetricScore + subMetric.calculateScore() * subMetric.getWeight();
+            mainMetricScore = mainMetricScore + subMetric.calculateScore() ;
         }
         return mainMetricScore;
     }
